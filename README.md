@@ -1,3 +1,6 @@
+
+---
+
 ## Setting Up Node.js and Express.js in VS Code
 
 ## Prerequisites
@@ -36,9 +39,17 @@ Before getting started, ensure you have the following installed:
    cd my-express-app
    ```
 3. Initialize a new Node.js project:
+
+   With **npm**:
    ```bash
    npm init -y
    ```
+
+   Or with **Yarn**:
+   ```bash
+   yarn init -y
+   ```
+
    This creates a `package.json` file with default settings.
 
 ---
@@ -46,9 +57,17 @@ Before getting started, ensure you have the following installed:
 ### Step 2: Install Express.js
 
 1. Install Express.js as a dependency:
+
+   With **npm**:
    ```bash
    npm install express
    ```
+
+   Or with **Yarn**:
+   ```bash
+   yarn add express
+   ```
+
 2. Verify the installation by checking the `package.json` file. The `dependencies` section should include `express`.
 
 ---
@@ -89,9 +108,17 @@ Before getting started, ensure you have the following installed:
 
 1. Open the integrated terminal in VS Code (`Ctrl + ~` or `Cmd + ~` on macOS).
 2. Start the server:
+
+   With **npm**:
    ```bash
    node server.js
    ```
+
+   Or with **Yarn**:
+   ```bash
+   yarn node server.js
+   ```
+
 3. Open your browser and navigate to [http://localhost:3000](http://localhost:3000). You should see **"Hello, Express!"** displayed.
 
 ---
@@ -102,8 +129,14 @@ Before getting started, ensure you have the following installed:
 
 1. Install TypeScript and its associated Node.js types:
 
+   With **npm**:
    ```bash
    npm install --save-dev typescript @types/node @types/express
+   ```
+
+   Or with **Yarn**:
+   ```bash
+   yarn add --dev typescript @types/node @types/express
    ```
 
 2. Verify the installation by running:
@@ -117,8 +150,14 @@ Before getting started, ensure you have the following installed:
 
 1. Initialize a TypeScript configuration file:
 
+   With **npm**:
    ```bash
    npx tsc --init
+   ```
+
+   Or with **Yarn**:
+   ```bash
+   yarn tsc --init
    ```
 
 2. Open the `tsconfig.json` file and configure it:
@@ -145,6 +184,7 @@ Before getting started, ensure you have the following installed:
    ```bash
    mkdir src
    ```
+
 2. Move your `server.js` file into the `src` folder and rename it to `server.ts`.
 
 ---
@@ -174,16 +214,28 @@ Before getting started, ensure you have the following installed:
 
 1. Compile TypeScript to JavaScript:
 
+   With **npm**:
    ```bash
    npx tsc
+   ```
+
+   Or with **Yarn**:
+   ```bash
+   yarn tsc
    ```
 
    The compiled files will appear in the `dist` directory.
 
 2. Run the server:
 
+   With **npm**:
    ```bash
    node dist/server.js
+   ```
+
+   Or with **Yarn**:
+   ```bash
+   yarn node dist/server.js
    ```
 
 3. Open your browser and navigate to [http://localhost:3000](http://localhost:3000). You should see **"Hello, TypeScript with Express!"** displayed.
@@ -194,24 +246,36 @@ Before getting started, ensure you have the following installed:
 
 - Use **Nodemon** for automatic server restarts during development:
 
-  ```bash
-  npm install --save-dev nodemon
-  ```
+   With **npm**:
+   ```bash
+   npm install --save-dev nodemon
+   ```
+
+   Or with **Yarn**:
+   ```bash
+   yarn add --dev nodemon
+   ```
 
   Update the `package.json` scripts:
-
-  ```json
-  "scripts": {
+  
+   ```json
+   "scripts": {
       "start": "node dist/server.js",
       "dev": "nodemon dist/server.js"
-  }
-  ```
+   }
+   ```
 
   Run the development server:
 
-  ```bash
-  npm run dev
-  ```
+   With **npm**:
+   ```bash
+   npm run dev
+   ```
+
+   Or with **Yarn**:
+   ```bash
+   yarn dev
+   ```
 
 - Add a `.gitignore` file to exclude `node_modules` and `dist`:
   ```
